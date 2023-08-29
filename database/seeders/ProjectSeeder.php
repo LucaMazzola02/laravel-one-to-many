@@ -21,7 +21,7 @@ class ProjectSeeder extends Seeder
 
         for ($i=0; $i < 100; $i++) {
             $newProject = new Project();
-            $newPost->type_id = ($faker->randomElement($types))->id;
+            $newProject->type_id = ($faker->randomElement($types))->id;
             $newProject->title = ucfirst($faker->unique()->words(4, true));
             $newProject->content = $faker->paragraphs(10, true);
             $newProject->slug = $faker->slug();

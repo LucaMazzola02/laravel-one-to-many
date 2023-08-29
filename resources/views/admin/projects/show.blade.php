@@ -5,8 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="card">
-                <h5 class="card-header"> ID: {{ $project->id }} ---- {{ $project->slug }}</h5>
-
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 style="color:#fff; font-weight:bolder; background-color:{{$project->type->color;}}" class="card-header"> {{ $project->type ? $project->type->name : '' }}</h4>
+                    <h5 class="pe-3">ID:{{$project->slug}}</h5>
+                </div>
+                
                 @if (str_starts_with($project->image, 'http'))
                     <img src="{{ $project->image }}" alt="{{ $project->title }}">
                 @else

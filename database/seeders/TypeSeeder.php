@@ -16,7 +16,7 @@ class TypeSeeder extends Seeder
     public function run( Faker $faker): void
     {
         $types = [
-            'Project_scope', 'Timeframe', 'Organisation', 'Cost', 'Communication', 'Task_assignation', 'Quality_of_results'
+            'Project scope', 'Timeframe', 'Organisation', 'Cost', 'Communication', 'Task assignation', 'Quality of results'
         ];
 
         foreach ($types as $type) {

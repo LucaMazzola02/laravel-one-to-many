@@ -52,6 +52,9 @@ class ProjectController extends Controller
         $data['slug'] = Str::of($data['title'])->slug('-');
         $newproject = Project::create($data);
 
+        $newProject->slug = Str::of("$newProject->id " . $data['title'])->slug('-');
+        $newProject->save();
+
         return redirect()->route('admin.projects.index');
 
     }
